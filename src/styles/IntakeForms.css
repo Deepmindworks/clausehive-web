@@ -27,8 +27,21 @@
 }
 
 .form-icon {
-    font-size: var(--text-5xl);
-    margin-bottom: var(--space-4);
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-teal-dark) 100%);
+    border-radius: var(--radius-xl);
+    color: white;
+    margin: 0 auto var(--space-6);
+    transition: all var(--transition-base);
+}
+
+.form-card:hover .form-icon {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(17, 199, 197, 0.3);
 }
 
 .form-card h4 {

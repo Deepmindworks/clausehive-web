@@ -1,30 +1,31 @@
 import '../styles/UseCases.css';
 import { motion } from 'framer-motion';
+import { Scale, ShoppingCart, Banknote, Users, Rocket } from 'lucide-react';
 
 export default function UseCases() {
     const useCases = [
         {
-            icon: '⚖️',
+            icon: <Scale size={32} />,
             title: 'Legal & Compliance',
             description: 'Centralize contract review, ensure compliance, track obligations, and maintain complete audit trails for regulatory requirements.'
         },
         {
-            icon: '🛒',
+            icon: <ShoppingCart size={32} />,
             title: 'Procurement & Vendor Management',
             description: 'Streamline vendor onboarding, manage supplier agreements, track spend commitments, and automate renewal negotiations.'
         },
         {
-            icon: '💰',
+            icon: <Banknote size={32} />,
             title: 'Sales & Finance',
             description: 'Accelerate deal cycles with automated approvals, track revenue contracts, manage payment terms, and integrate with your CRM.'
         },
         {
-            icon: '👥',
+            icon: <Users size={32} />,
             title: 'HR & Partner Agreements',
             description: 'Manage employment contracts, NDAs, partner agreements, and ensure consistent terms across all relationships.'
         },
         {
-            icon: '🚀',
+            icon: <Rocket size={32} />,
             title: 'AI/SaaS Companies',
             description: 'Built for fast-growing, AI-native businesses that need scalable, automated CLM with modern integrations and APIs.'
         }

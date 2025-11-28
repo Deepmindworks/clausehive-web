@@ -28,8 +28,13 @@
 }
 
 .ai-feature-icon {
-    font-size: var(--text-3xl);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
+    color: var(--color-deep-navy);
 }
 
 .ai-feature h4 {

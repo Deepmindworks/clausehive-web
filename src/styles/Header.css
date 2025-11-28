@@ -5,24 +5,60 @@
     left: 0;
     right: 0;
     z-index: var(--z-sticky);
-    background: rgba(247, 249, 251, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid transparent;
+    padding: var(--space-4) 0;
+    pointer-events: none;
+    /* Allow clicks to pass through outside the pill */
     transition: all var(--transition-base);
 }
 
-.header.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    border-bottom-color: var(--color-grey-200);
-    box-shadow: var(--shadow-md);
+.header-pill {
+    max-width: 1200px;
+    margin: var(--space-2) auto 0;
+    padding: 0 var(--space-8);
+    background: linear-gradient(rgba(10, 26, 47, 0.95), rgba(10, 26, 47, 0.95)) padding-box,
+        linear-gradient(135deg, #FF5F57 0%, #655BE1 100%) border-box;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radius-full);
+    pointer-events: auto;
+    transition: all var(--transition-base);
+    border: 1px solid transparent;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.header.scrolled .header-pill {
+    /* Styles are now default, but we can keep specific scrolled adjustments if needed */
+    /* For now, the user wants the dark style applied "instead of white", implying always or as the main style */
+}
+
+/* Hexagon Background for Header */
+.header.scrolled .header-pill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(30deg, var(--color-teal) 12%, transparent 12.5%, transparent 87%, var(--color-teal) 87.5%, var(--color-teal)),
+        linear-gradient(150deg, var(--color-teal) 12%, transparent 12.5%, transparent 87%, var(--color-teal) 87.5%, var(--color-teal)),
+        linear-gradient(30deg, var(--color-teal) 12%, transparent 12.5%, transparent 87%, var(--color-teal) 87.5%, var(--color-teal)),
+        linear-gradient(150deg, var(--color-teal) 12%, transparent 12.5%, transparent 87%, var(--color-teal) 87.5%, var(--color-teal));
+    background-size: 60px 104px;
+    /* Smaller hexagons for header */
+    background-position: 0 0, 0 0, 30px 52px, 30px 52px;
+    opacity: 0.05;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 70px;
     gap: var(--space-8);
 }
 
@@ -34,7 +70,8 @@
     font-family: var(--font-display);
     font-size: var(--text-xl);
     font-weight: 700;
-    color: var(--color-deep-navy);
+    color: white;
+    /* Always white text for logo name */
     cursor: pointer;
     transition: transform var(--transition-fast);
 }
@@ -44,10 +81,10 @@
 }
 
 .logo-text {
-    background: linear-gradient(135deg, var(--color-deep-navy) 0%, var(--color-teal) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: white;
+    /* Force white color */
+    background: none;
+    -webkit-text-fill-color: initial;
 }
 
 /* Navigation */
@@ -63,7 +100,8 @@
     font-family: var(--font-display);
     font-size: var(--text-base);
     font-weight: 500;
-    color: var(--color-grey-700);
+    color: rgba(255, 255, 255, 0.8);
+    /* Light text for dark background */
     position: relative;
     padding: var(--space-2) 0;
     transition: color var(--transition-fast);
@@ -76,12 +114,12 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--color-teal), var(--color-honey-gold));
+    background: var(--color-teal);
     transition: width var(--transition-base);
 }
 
 .nav-link:hover {
-    color: var(--color-teal);
+    color: white;
 }
 
 .nav-link:hover::after {
@@ -93,6 +131,18 @@
     display: flex;
     align-items: center;
     gap: var(--space-4);
+}
+
+.btn-outline {
+    border-color: var(--color-teal);
+    color: var(--color-teal);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--color-teal);
+    border-color: var(--color-teal);
+    color: white;
 }
 
 /* Mobile Menu Button */
@@ -109,7 +159,8 @@
 .mobile-menu-btn span {
     width: 24px;
     height: 2px;
-    background: var(--color-deep-navy);
+    background: white;
+    /* White hamburger menu */
     transition: all var(--transition-base);
     border-radius: 2px;
 }
@@ -132,15 +183,20 @@
     flex-direction: column;
     gap: var(--space-4);
     padding: var(--space-6) 0;
-    border-top: 1px solid var(--color-grey-200);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     animation: fadeInUp 0.3s ease-out;
+    background: var(--color-deep-navy);
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    padding: var(--space-6);
+    margin: 0 -24px -24px -24px;
+    /* Negative margin to fill pill width */
 }
 
 .mobile-nav-link {
     font-family: var(--font-display);
     font-size: var(--text-lg);
     font-weight: 500;
-    color: var(--color-grey-700);
+    color: rgba(255, 255, 255, 0.9);
     padding: var(--space-3) 0;
     transition: color var(--transition-fast);
 }
@@ -168,6 +224,10 @@
 }
 
 @media (max-width: 768px) {
+    .header-pill {
+        margin: 0 var(--space-4);
+        border-radius: var(--radius-xl);
+    }
 
     .nav,
     .cta-buttons {
@@ -179,6 +239,6 @@
     }
 
     .header-content {
-        height: 70px;
+        height: 60px;
     }
 }

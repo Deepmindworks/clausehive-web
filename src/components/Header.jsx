@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../styles/Header.css';
+import logo from '../assets/logo.svg';
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -16,20 +17,11 @@ export default function Header() {
 
     return (
         <header className={`header ${scrolled ? 'scrolled' : ''}`}>
-            <div className="container">
+            <div className="header-pill">
                 <div className="header-content">
                     {/* Logo */}
                     <div className="logo">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 2L35 11V29L20 38L5 29V11L20 2Z" fill="url(#hexGradient)" stroke="#11C7C5" strokeWidth="2" />
-                            <path d="M20 12L27 16.5V25.5L20 30L13 25.5V16.5L20 12Z" fill="#F4C542" />
-                            <defs>
-                                <linearGradient id="hexGradient" x1="5" y1="2" x2="35" y2="38" gradientUnits="userSpaceOnUse">
-                                    <stop stopColor="#11C7C5" />
-                                    <stop offset="1" stopColor="#0A1A2F" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
+                        <img src={logo} alt="ClauseHive Logo" width="40" height="40" />
                         <span className="logo-text">ClauseHive</span>
                     </div>
 
@@ -44,8 +36,8 @@ export default function Header() {
 
                     {/* CTA Buttons */}
                     <div className="cta-buttons">
-                        <a href="#demo" className="btn btn-outline btn-sm">Book Demo</a>
-                        <a href="#trial" className="btn btn-primary btn-sm">Start Free Trial</a>
+                        <a href="https://calendly.com/sathvisiva/30min" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm">Book Demo</a>
+                        {/* <a href="#trial" className="btn btn-primary btn-sm">Start Free Trial</a> */}
                     </div>
 
                     {/* Mobile Menu Button */}

@@ -1,5 +1,5 @@
 import '../styles/AISearch.css';
-import { Search } from 'lucide-react';
+import { Search, MessageSquare, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function AISearch() {
@@ -14,21 +14,21 @@ export default function AISearch() {
                         </p>
                         <div className="ai-features">
                             <div className="ai-feature">
-                                <div className="ai-feature-icon">🔍</div>
+                                <div className="ai-feature-icon"><Search size={20} /></div>
                                 <div>
                                     <h4>Semantic Search</h4>
                                     <p>Find contracts by meaning, not just keywords</p>
                                 </div>
                             </div>
                             <div className="ai-feature">
-                                <div className="ai-feature-icon">💬</div>
+                                <div className="ai-feature-icon"><MessageSquare size={20} /></div>
                                 <div>
                                     <h4>Natural Language Queries</h4>
                                     <p>Ask questions like you would to a colleague</p>
                                 </div>
                             </div>
                             <div className="ai-feature">
-                                <div className="ai-feature-icon">⚡</div>
+                                <div className="ai-feature-icon"><Zap size={20} /></div>
                                 <div>
                                     <h4>Instant Results</h4>
                                     <p>Get answers in milliseconds, not hours</p>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+  
+     viewBox="35 19 50 60"
+     fill="none">
+
+  <!-- Main gradient for dark mode -->
+  <defs>
+    <linearGradient id="hexGradientDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#11C7C5"/>
+      <stop offset="100%" stop-color="#0A1A2F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Logo group -->
+  <g transform="translate(10,6)">
+
+    <!-- Outer hexagon stroke (slightly brighter for dark bg) -->
+    <path d="M50 15 L73 28.66 V56 L50 69.64 L27 56 V28.66 Z"
+          stroke="#11C7C5"
+          stroke-width="3"
+          fill="none"
+          stroke-linejoin="round"/>
+
+    <!-- Inner hexagon -->
+    <path d="M50 25 L62 32 V46 L50 53 L38 46 V32 Z"
+          stroke="#11C7C5"
+          stroke-width="2"
+          opacity="0.35"
+          fill="none"/>
+
+    <!-- Document block -->
+    <path d="M42 30 V55 H65 V38 L57 30 Z"
+          fill="url(#hexGradientDark)"
+          opacity="0.95"/>
+
+    <!-- Fold -->
+    <path d="M57 30 V38 H65 Z" fill="#F4C542"/>
+
+    <!-- Document lines visible on dark -->
+    <path stroke="#FFFFFF" stroke-width="1.5" opacity="0.95"
+          d="M46 42h14 M46 47h14 M46 52h9"/>
+
+    <!-- Honeycomb accents -->
+    <path d="M35 32 L38 34 V38 L35 40 L32 38 V34 Z"
+          fill="#11C7C5" opacity="0.85"/>
+
+    <path d="M65 57 L67.5 58.5 V61.5 L65 63 L62.5 61.5 V58.5 Z"
+          fill="#F4C542" opacity="0.95"/>
+
+    <path d="M32 57 L34 58.5 V61.5 L32 63 L30 61.5 V58.5 Z"
+          fill="#11C7C5" opacity="0.7"/>
+
+    <!-- Bottom honeycomb -->
+    <path d="M52 72 L56 74.5 V79.5 L52 82 L48 79.5 V74.5 Z"
+          stroke="#F4C542"
+          stroke-width="1.5"
+          fill="none"/>
+  </g>
+</svg>

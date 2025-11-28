@@ -1,14 +1,15 @@
 import '../styles/IntakeForms.css';
 import { motion } from 'framer-motion';
+import { Handshake, Building2, Briefcase, ClipboardList, Users, Wrench } from 'lucide-react';
 
 export default function IntakeForms() {
     const forms = [
-        { icon: '🤝', title: 'NDA Request', description: 'Quick mutual or one-way NDA generation' },
-        { icon: '🏢', title: 'Vendor Onboarding', description: 'Comprehensive vendor agreement workflow' },
-        { icon: '💼', title: 'Sales Contract', description: 'Customer agreements with approval routing' },
-        { icon: '📋', title: 'Work Order', description: 'SOW and project-based contracts' },
-        { icon: '👥', title: 'Employment Agreement', description: 'HR contracts with compliance checks' },
-        { icon: '🔧', title: 'Custom Template', description: 'Build any contract type you need' }
+        { icon: <Handshake size={32} />, title: 'NDA Request', description: 'Quick mutual or one-way NDA generation' },
+        { icon: <Building2 size={32} />, title: 'Vendor Onboarding', description: 'Comprehensive vendor agreement workflow' },
+        { icon: <Briefcase size={32} />, title: 'Sales Contract', description: 'Customer agreements with approval routing' },
+        { icon: <ClipboardList size={32} />, title: 'Work Order', description: 'SOW and project-based contracts' },
+        { icon: <Users size={32} />, title: 'Employment Agreement', description: 'HR contracts with compliance checks' },
+        { icon: <Wrench size={32} />, title: 'Custom Template', description: 'Build any contract type you need' }
     ];
 
     return (
@@ -35,12 +36,6 @@ export default function IntakeForms() {
                             <p>{form.description}</p>
                         </motion.div>
                     ))}
-                </div>
-                <div className="intake-feature">
-                    <p>
-                        ✨ Fields automatically map to metadata • Workflows trigger based on inputs •
-                        Full customization for your business needs
-                    </p>
                 </div>
             </div>
         </section>

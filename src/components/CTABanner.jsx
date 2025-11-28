@@ -18,8 +18,8 @@ export default function CTABanner() {
                         reduce risk, and accelerate contract cycles.
                     </p>
                     <div className="cta-buttons">
-                        <a href="#demo" className="btn btn-primary btn-lg">Book a Demo</a>
-                        <a href="#trial" className="btn btn-outline btn-lg">Start Free Trial</a>
+                        <a href="https://calendly.com/sathvisiva/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">Book a Demo</a>
+                        {/* <a href="#trial" className="btn btn-outline btn-lg">Start Free Trial</a> */}
                     </div>
                 </motion.div>
             </div>

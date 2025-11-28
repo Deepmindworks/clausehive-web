@@ -1,4 +1,5 @@
 import '../styles/Footer.css';
+import logo from '../assets/logo.svg';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -10,16 +11,7 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className="footer-column">
                         <div className="footer-logo">
-                            <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 2L35 11V29L20 38L5 29V11L20 2Z" fill="url(#hexGradientFooter)" stroke="#11C7C5" strokeWidth="2" />
-                                <path d="M20 12L27 16.5V25.5L20 30L13 25.5V16.5L20 12Z" fill="#F4C542" />
-                                <defs>
-                                    <linearGradient id="hexGradientFooter" x1="5" y1="2" x2="35" y2="38" gradientUnits="userSpaceOnUse">
-                                        <stop stopColor="#11C7C5" />
-                                        <stop offset="1" stopColor="#0A1A2F" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
+                            <img src={logo} alt="ClauseHive Logo" width="36" height="36" />
                             <span className="logo-text">ClauseHive</span>
                         </div>
                         <p className="footer-description">
@@ -99,9 +91,9 @@ export default function Footer() {
                     <p className="copyright">
                         © {currentYear} ClauseHive. All rights reserved.
                     </p>
-                    <p className="tagline">
+                    {/* <p className="tagline">
                         Built for AI-native businesses 🚀
-                    </p>
+                    </p> */}
                 </div>
             </div>
         </footer>

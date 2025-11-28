@@ -23,7 +23,7 @@ export default function App() {
         <AISearch />
         <IntakeForms />
         <UseCases />
-        <Pricing />
+        {/* <Pricing /> */}
         <CTABanner />
       </main>
       <Footer />
