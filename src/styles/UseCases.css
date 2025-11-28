@@ -1,0 +1,42 @@
+/* Use Cases Section */
+.use-cases {
+    background: white;
+}
+
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-8);
+}
+
+.use-case-card {
+    background: linear-gradient(135deg, var(--color-grey-50) 0%, white 100%);
+    padding: var(--space-10);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    border: 1px solid var(--color-grey-200);
+}
+
+.use-case-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-teal);
+}
+
+.use-case-icon {
+    font-size: var(--text-5xl);
+    margin-bottom: var(--space-6);
+}
+
+.use-case-card h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-4);
+    color: var(--color-deep-navy);
+}
+
+.use-case-card p {
+    color: var(--color-grey-700);
+    line-height: 1.7;
+    margin: 0;
+}

@@ -1,0 +1,58 @@
+/* Intake Forms Section */
+.intake-forms {
+    background: var(--color-light-bg);
+}
+
+.intake-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.form-card {
+    background: white;
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+}
+
+.form-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-teal);
+}
+
+.form-icon {
+    font-size: var(--text-5xl);
+    margin-bottom: var(--space-4);
+}
+
+.form-card h4 {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+    color: var(--color-deep-navy);
+}
+
+.form-card p {
+    font-size: var(--text-sm);
+    color: var(--color-grey-600);
+    margin: 0;
+}
+
+.intake-feature {
+    text-align: center;
+    padding: var(--space-6);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.intake-feature p {
+    color: var(--color-grey-700);
+    margin: 0;
+}
